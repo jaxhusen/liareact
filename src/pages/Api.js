@@ -1,14 +1,14 @@
 import React from "react";
 
-function Api({api}) { /* hämtar props från Api filen */
-    console.log(api.name)
+function Api(props) { /* hämtar props från Api filen */
+    console.log(props)
 
     return (
         <div>
                 <article>
-                <p>Index: {api.index}</p>
-                <p>name:{api.name}</p>
-                <p>city:{api.city}</p>
+                <p>Index: {props.api.index}</p>
+                <p>name:{props.api.name}</p>
+                <p>city:{props.api.city}</p>
                 </article>
         </div>
     )

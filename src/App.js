@@ -1,16 +1,19 @@
 import './App.css';
 import Apis from './pages/Apis';
+/* import Api from './pages/Api'; */
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+/* import { BrowserRouter, Routes, Route } from 'react-router-dom'; */
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Apis />} />
-          </Routes>
-        </BrowserRouter> 
+      <Apis />
+      {/* <Api /> */}
+{/*       <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Api />} />
+            </Routes>
+      </BrowserRouter> */}
     </div>
   );
 }
