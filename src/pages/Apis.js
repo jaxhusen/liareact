@@ -1,38 +1,45 @@
 //GET ALL API
 import React, { useState, useEffect } from 'react';
-import Api from './Api';
+/* import Api from './Api'; */
 
 
 function Apis() {
     const [apis, setApis] = useState([]);
 
-    
+
     useEffect(() => {
         const fetchData = async () => {
             // hämtar API och sparar i apis
             try {
                 const response = await fetch('https://randomuser.me/api/?results=50');
                 const data = await response.json();
-                setApis(data);
-                console.log(data);
+                setApis(data.results);
+                console.log(data); //"array" med objekt
             } catch (error) {
                 console.log(error);
             }
         }
 
-    fetchData();
+        fetchData();
     }, [apis])
-    console.log(apis);
+    console.log(apis); //array ( med objekt i)
+
+
+
 
     return (
         <div>
             {
-                apis.map(api => <Api key={api.index} api={api} />)
+                apis.map((api => (
+                <div key={api.index}>
+                    {api.name}
+                </div>
+                )))
             }
         </div>
-    )
-        }
-    export default Apis
+    );
+}
+export default Apis
 
 /*     const fetchData = async () => {
         // hämtar API och sparar i apiList
@@ -51,11 +58,28 @@ function Apis() {
 
 
 
+    let apiList = apis.map(  (api) => {
+    return (
+                       <article key={api.index}>
+                           <h2>{api.name}</h2>
+                           <h2>{api.city}</h2>
+                       </article>
+                   )
+               }) 
+    return <div>{apiList}</div>;
+        }
+    export default Apis
+
+
+
 
     
     {
             apis.map(api => <Api key={api.id} api={api} />)
             }
+
+
+            apis.map(api => <Api key={api.index} api={api} />)
     
 
 
