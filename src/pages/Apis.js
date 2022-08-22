@@ -1,6 +1,6 @@
 //GET ALL API
 import React, { useState, useEffect } from 'react';
-/* import Api from './Api'; */
+import Api from './Api'; 
 
 
 function Apis() {
@@ -30,11 +30,7 @@ function Apis() {
     return (
         <div>
             {
-                apis.map((api => (
-                <div key={api.index}>
-                    {api.name}
-                </div>
-                )))
+                apis.map(api => <Api key={api.index} api={api} />)
             }
         </div>
     );
@@ -74,9 +70,7 @@ export default Apis
 
 
     
-    {
-            apis.map(api => <Api key={api.id} api={api} />)
-            }
+   
 
 
             apis.map(api => <Api key={api.index} api={api} />)
