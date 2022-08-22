@@ -1,6 +1,7 @@
 //GET ALL API
 import React, { useState, useEffect } from 'react';
 import Api from './Api'; 
+import Styling from './Apis.module.css'
 
 
 function Apis() {
@@ -28,7 +29,7 @@ function Apis() {
 
 
     return (
-        <div>
+        <div id={Styling.parentArticle}>
             {
                 apis.map(api => <Api key={api.index} api={api} />)
             }

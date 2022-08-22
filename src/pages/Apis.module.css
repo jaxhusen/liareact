@@ -1,0 +1,11 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: auto;
+    max-width: 800px;
+    }
+    
+#parentArticle{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+}
