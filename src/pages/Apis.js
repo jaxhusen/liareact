@@ -22,8 +22,8 @@ function Apis() {
         }
 
         fetchData();
-    }, [apis])
-    console.log(apis); //array ( med objekt i)
+    }, []);
+    //console.log(apis); //array ( med objekt i)
 
 
 
