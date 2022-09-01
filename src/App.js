@@ -1,19 +1,17 @@
-import './App.css';
+/* http://localhost:3000/ */
+import './App.scss';
 import Apis from './pages/Apis';
-/* import Api from './pages/Api'; */
-import React from 'react';
-/* import { BrowserRouter, Routes, Route } from 'react-router-dom'; */
+import Header from './pages/Header';
+import React/* , { useState }  */from 'react';
+
 
 function App() {
+  
+  
   return (
     <div className="App">
+      <Header />
       <Apis />
-      {/* <Api /> */}
-{/*       <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Api />} />
-            </Routes>
-      </BrowserRouter> */}
     </div>
   );
 }
